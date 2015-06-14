@@ -1,0 +1,498 @@
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths no-oldwebkitgradient no-nonprefixboxshadow nativejson"><head>
+	<base href="http://layerstyles.org/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Layer Styles</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <div id="main" class="box vertical flex">
+        <span id="codeBoxToggle">CSS Code</span>
+        <div id="workspace" class="box vertical flex">
+            <div id="overlay"></div>
+            <canvas id="innerShadow_universe" height="434" width="1440"></canvas>
+            <canvas id="parallel_universe" height="434" width="1440"></canvas>
+            <div id="background_layer" class="flex"></div>
+            <div id="layer" style="-webkit-box-shadow: rgba(0, 0, 0, 0.560784) 0px 1px 5px, white 0px 1px 0px inset; border-top-left-radius: 12%; border-top-right-radius: 44%; border-bottom-right-radius: 44%; border-bottom-left-radius: 44%; background: -webkit-linear-gradient(top, rgb(252, 252, 252), rgb(247, 247, 247) 3%, rgb(242, 242, 242) 12%, rgb(217, 217, 217) 90%, rgb(191, 191, 191));"><div id="resize" class="resize"></div></div>
+        </div> <!-- /workspace -->
+        <div id="codeBox" class="paper" style="height: 0px;">
+            <div class="dragger y"><div class="dragBox"></div></div>
+            <div class="body">
+                <div class="scroll paper">
+                    <div id="copyCode">copy<embed id="ZeroClipboardMovie_1" src="http://layerstyles.org/js/zeroclipboard/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="78" height="15" name="ZeroClipboardMovie_1" align="middle" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=78&amp;height=15" wmode="transparent"></div>
+                    <div id="colorSwitch" class="toggle">
+                        <div class="slidePanel" style="left: -39px;">
+                            <span class="left">rgb</span><span class="button"></span><span class="right">hex</span>
+                        </div>
+                    </div>
+                    <code>border-radius: 12% 44% 44%;<br>background-image: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#bfbfbf), color-stop(3%, #f7f7f7), color-stop(12%, #f2f2f2), color-stop(90%, #d9d9d9));<br>background-image: -webkit-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);<br>background-image: -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);<br>background-image: -o-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);<br>background-image: -ms-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);<br>background-image: linear-gradient(to bottom, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);<br>-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.56), inset 0 1px 0 white;<br>-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.56), inset 0 1px 0 white;<br>box-shadow: 0 1px 5px rgba(0,0,0,0.56), inset 0 1px 0 white;<br></code>
+                </div>
+            </div>
+        </div> <!-- /codeBox -->
+    </div> <!-- /main -->
+    <div id="layerstyle" style="overflow: visible; top: 106px; left: 870px; display: none;" class="">
+		<div id="headerBg"></div>
+		<div id="dialog" class="window" style="visibility: visible; opacity: 1; margin-left: 0px;">
+			<div class="head moveable">
+				<h2>Layer Style</h2>
+			</div>
+			<div class="body">
+	       		<div class="main">
+	                <div id="nav">
+	                    <ul>
+	                        <li>Styles</li>
+	                        <li class="nav-dropShadow"><input type="checkbox" checked="checked">Drop Shadow</li>
+	                        <li class="nav-innerShadow"><input type="checkbox">Inner Shadow</li>
+	                        <li class="nav-background"><input type="checkbox" checked="checked">Background</li>
+	                        <li class="nav-border active"><input type="checkbox" checked="checked">Border</li>
+	                        <li class="nav-borderRadius"><input type="checkbox">Border Radius</li>
+	                    </ul>
+	                </div>
+	                <div class="styles">
+	                    <div id="holder" class="holder">
+	                        <div>
+	                            <h3>Styles</h3>
+								<div id="stylePresets" class="border_box">
+									
+								<div class="swatch active" title="Default Style" data-pos="0"><div style="border: 1px solid black; -webkit-box-shadow: rgba(0, 0, 0, 0.74902) 0px 1px 5px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background: -webkit-linear-gradient(top, rgb(252, 252, 252), rgb(247, 247, 247) 3%, rgb(242, 242, 242) 12%, rgb(217, 217, 217) 90%, rgb(191, 191, 191));"></div></div><div class="swatch" title="Inset Box" data-pos="1"><div style="border: 1px solid black; -webkit-box-shadow: white 0px 1px 0px, rgba(0, 0, 0, 0.4) 0px 1px 7px inset; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background: -webkit-linear-gradient(top, rgb(191, 191, 191), rgb(217, 217, 217) 10%, rgb(242, 242, 242) 88%, rgb(247, 247, 247) 97%, rgb(252, 252, 252));"></div></div><div class="swatch" title="Vista Inset Box" data-pos="2"><div style="-webkit-box-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 0px, rgba(0, 0, 0, 0.4) 0px 1px 7px inset; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background: -webkit-linear-gradient(top, rgb(116, 116, 116), rgb(109, 109, 109) 50%, rgb(126, 126, 126) 50%, rgb(133, 133, 133));"></div></div><div class="swatch" title="Hello Red" data-pos="3"><div style="border: 1px solid rgb(168, 0, 2); -webkit-box-shadow: rgba(255, 255, 255, 0.137255) 0px 1px 0px, rgba(255, 255, 255, 0.207843) 0px 1px 0px inset; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background: -webkit-linear-gradient(top, rgb(213, 87, 91), rgb(196, 48, 51));"></div></div><div class="swatch" title="Orange Box" data-pos="4"><div style="border: 1px solid rgb(153, 102, 52); -webkit-box-shadow: rgb(249, 169, 88) 0px 0px 0px 1px inset; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; background: -webkit-linear-gradient(top, rgb(255, 225, 173), rgb(253, 197, 101) 5%, rgb(250, 169, 28) 12%, rgb(234, 133, 16) 92%, rgb(217, 97, 4));"></div></div><div class="swatch" title="Apple Promo Box" data-pos="5"><div style="-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 3px, white 0px 0px 0px 3px inset; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background: -webkit-linear-gradient(top, rgb(250, 250, 250), rgb(238, 238, 238));"></div></div><div class="swatch" title="iPhone Copy Button" data-pos="6"><div style="border: 1px solid rgb(50, 50, 50); -webkit-box-shadow: rgba(0, 0, 0, 0.54902) 0px 3px 4px, rgba(255, 255, 255, 0.498039) 0px 1px 0px inset; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background: -webkit-linear-gradient(top, rgb(112, 134, 255), rgb(79, 105, 255) 37%, rgb(53, 83, 255) 41%, rgb(49, 79, 254));"></div></div><div class="swatch" title="Please don't sue me" data-pos="7"><div style="border: 1px solid black; -webkit-box-shadow: rgba(0, 0, 0, 0.74902) 0px 0px 5px, rgba(255, 255, 255, 0.54902) 0px 1px 0px inset; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background: -webkit-linear-gradient(top, rgb(22, 127, 232), rgb(0, 60, 123));"></div></div></div>
+	                        </div>
+	                        <div id="dropShadow" class="">
+	                            <h3>Drop Shadow</h3>
+	                            <label>Color:</label>
+	                            <div>
+	                                <div class="color_field" style="background: rgb(0, 0, 0);"></div>
+	                            </div>
+	                            <label for="ds-opacity">Opacity:</label>
+	                            <div>
+	                                <div class="slider"><div class="bar"></div><div class="arrow" style="left: 55.828125px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="opacity" id="ds-opacity" type="text" data-min="0" data-max="100" data-restrict="digits" value="75">
+	                                %
+	                            </div>
+	                            <label class="angle_holder" for="ds-angle">Angle:</label>
+	                            <div>
+	                                <div class="pot"><div class="pointer" style="-webkit-transform: rotate(-90deg);"><div class="dot"></div><div class="line"></div></div></div>
+	                                <div class="angle_holder">
+	                                    <input class="angle" id="ds-angle" type="text" data-min="0" data-max="360" data-restrict="digits" value="90">
+	                                    °
+	                                    <input type="checkbox" class="globalLight" id="ds-globalLight"><label for="ds-globalLight">Use Global Light</label>
+	                                </div>
+	                            </div>
+	                            <label for="ds-distance">Distance:</label>
+	                            <div>
+	                                <div class="slider" data-easing="true"><div class="bar"></div><div class="arrow" style="left: 10px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="distance" id="ds-distance" type="text" data-min="0" data-max="100" value="1">
+	                                px
+	                            </div>
+	                            <label for="ds-blur">Blur:</label>
+	                            <div>
+	                                <div class="slider" data-easing="true"><div class="bar"></div><div class="arrow" style="left: 22px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="blur" id="ds-blur" type="text" data-min="0" data-max="100" value="5">
+	                                px
+	                            </div>
+	                            <label for="ds-size">Size:</label>
+	                            <div>
+	                                <div class="slider" data-easing="true"><div class="bar"></div><div class="arrow" style="left: 0px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="size" id="ds-size" type="text" data-min="0" data-max="255" value="0">
+	                                px
+	                            </div>
+	                            <div class="clear"></div>
+	                        </div>
+							<div id="innerShadow" class="">
+	                            <h3>Inner Shadow</h3>
+	                            <label>Color:</label>
+	                            <div>
+	                                <div class="color_field" style="background: rgb(255, 255, 255);"></div>
+	                            </div>
+	                            <label for="is-opacity">Opacity:</label>
+	                            <div>
+	                                <div class="slider"><div class="bar"></div><div class="arrow" style="left: 100px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="opacity" id="is-opacity" type="text" data-min="0" data-max="100" data-restrict="digits" value="90">
+	                                %
+	                            </div>
+	                            <label class="angle_holder" for="is-angle">Angle:</label>
+	                            <div>
+	                                <div class="pot"><div class="pointer" style="-webkit-transform: rotate(-90deg);"><div class="dot"></div><div class="line"></div></div></div>
+	                                <div class="angle_holder">
+	                                    <input class="angle" id="is-angle" type="text" data-min="0" data-max="360" data-restrict="digits" value="90">
+	                                    °
+	                                    <input type="checkbox" class="globalLight" id="is-globalLight"><label for="is-globalLight">Use Global Light</label>
+	                                </div>
+	                            </div>
+	                            <label for="is-distance">Distance:</label>
+	                            <div>
+	                                <div class="slider" data-easing="true"><div class="bar"></div><div class="arrow" style="left: 10px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="distance" id="is-distance" type="text" data-min="0" data-max="100" value="1">
+	                                px
+	                            </div>
+	                            <label for="is-blur">Blur:</label>
+	                            <div>
+	                                <div class="slider" data-easing="true"><div class="bar"></div><div class="arrow" style="left: 0px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="blur" id="is-blur" type="text" data-min="0" data-max="100" value="0">
+	                                px
+	                            </div>
+	                            <label for="is-size">Size:</label>
+	                            <div>
+	                                <div class="slider" data-easing="true"><div class="bar"></div><div class="arrow" style="left: 0px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="size" id="is-size" type="text" data-min="0" data-max="255" value="0">
+	                                px
+	                            </div>
+	                            <div class="clear"></div>
+	                        </div>
+	                        <div id="background" class="">
+	                            <h3>Background</h3>
+								<label for="bg-opacity">Opacity:</label>
+	                            <div>
+	                                <div class="slider"><div class="bar"></div><div class="arrow" style="left: 100px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="opacity" id="bg-opacity" type="text" data-min="0" data-max="100" value="100">
+	                                %
+	                            </div>
+								<label>Gradient</label>
+								<div>
+									<div class="gradientField" style="background: -webkit-linear-gradient(left, rgb(252, 252, 252), rgb(247, 247, 247) 3%, rgb(242, 242, 242) 12%, rgb(217, 217, 217) 90%, rgb(191, 191, 191));"></div>
+									<input type="checkbox" class="reverse" id="bg-reverse"><label for="bg-reverse">Reverse</label>
+								</div>
+								<label>Style</label>
+								<div>
+									<select id="background_style">
+										<option value="linear">Linear</option>
+										<option value="reflected">Reflected</option>
+										<option value="contain">Radial - contain</option>
+										<option value="cover">Radial - cover</option>
+									</select>
+								</div>
+	                            <label class="angle_holder" for="bg-angle">Angle:</label>
+	                            <div>
+	                                <div class="pot"><div class="pointer" style="-webkit-transform: rotate(-90deg);"><div class="dot"></div><div class="line"></div></div></div>
+	                                <div class="angle_holder">
+	                                    <input class="angle" id="bg-angle" type="text" data-min="0" data-max="360" value="90">
+	                                    °
+	                                    <input type="checkbox" class="globalLight" id="bg-globalLight"><label for="bg-globalLight">Use Global Light</label>
+	                                </div>
+	                            </div>
+		                       	<div class="clear"></div>
+	                        </div>
+							<div id="border" class="active inactive">
+	                            <h3>Border</h3>
+								<label>Color:</label>
+	                            <div>
+	                                <div class="color_field" style="background: rgb(0, 0, 0);"></div>
+	                            </div>
+	                            <label for="bd-opacity">Opacity:</label>
+	                            <div>
+	                                <div class="slider"><div class="bar"></div><div class="arrow" style="left: 100px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="opacity" id="bd-opacity" type="text" data-min="0" data-max="100" value="100" disabled="">
+	                                %
+	                            </div>
+	                            <label for="bd-size">Size:</label>
+	                            <div>
+	                                <div class="slider"><div class="bar"></div><div class="arrow" style="left: 10px;"><div class="spike"></div><div class="rear"></div></div></div>
+	                                <input class="size" id="bd-size" type="text" data-min="0" data-max="10" value="1" disabled="">
+	                                px
+	                            </div>
+	                            <label>Style:</label>
+	                            <div id="border_styles" class="previews">
+									<div id="border_style_solid" title="solid" data-style="solid" class="active"></div>
+									<div id="border_style_dashed" title="dashed" data-style="dashed"></div>
+									<div id="border_style_dotted" title="dotted" data-style="dotted"></div>
+									<div id="border_style_double" title="double" data-style="double"></div>
+	                            </div>
+	                            <div class="clear"></div>
+	                        </div><!-- /border -->
+							<div id="borderRadius" class="">
+	                            <h3>Border Radius</h3>
+								<label for="br-radius">Radius:</label>
+								<div>
+									<div class="slider" data-easing="true"><div class="bar"></div><div class="arrow" style="left: 93.828125px;"><div class="spike"></div><div class="rear"></div></div></div>
+									<input class="radius" id="br-radius" type="text" data-min="0" data-max="200" value="0">
+	                                <span class="options" id="border_radius_unit"><span id="border_radius_pixel" data-unit="px" class="">px</span><span id="border_radius_percent" data-unit="%" class="active">%</span></span>
+								</div>
+								<label>Corners:</label>
+								<div id="border_radius_preview">
+									<div id="topLeft" class=""></div>
+									<div id="topRight" class="active"></div>
+									<div id="bottomRight" class="active"></div>
+									<div id="bottomLeft" class="active"></div>
+								</div>
+								<div class="clear"></div>
+							</div>
+	                    </div>
+	                </div>
+	                <div class="clear"></div>
+	            </div>
+	            <div class="controls">
+	                <button id="ok">OK</button>
+	                <button id="cancel">Cancel</button>
+	                <button id="new_style">New Style...</button>
+	            </div>
+			</div>
+        </div>
+		<div id="gradient_editor" class="window">
+			<div class="head moveable">
+				<h2>Gradient Editor</h2>
+			</div>
+			<div class="body">
+	           <div class="static_right">
+	                <div class="main">
+	                    <div class="holder">
+	                        <h3>Presets</h3>
+	                        <div id="gradient_presets_holder" class="border_box">
+	                            <div id="gradient_presets">
+	                            <div class="swatch" title="Black and White" style="background: -webkit-linear-gradient(right bottom, white, black);"></div><div class="swatch" title="Plain Gray" style="background: -webkit-linear-gradient(right bottom, rgb(252, 252, 252), rgb(247, 247, 247) 3%, rgb(242, 242, 242) 12%, rgb(217, 217, 217) 90%, rgb(191, 191, 191));"></div><div class="swatch" title="Be Water" style="background: -webkit-linear-gradient(right bottom, rgb(209, 237, 233), rgb(193, 233, 227) 3%, rgb(177, 228, 220) 12%, rgb(89, 210, 191) 90%, rgb(0, 191, 162));"></div><div class="swatch" title="Rainbow" style="background: -webkit-linear-gradient(right bottom, rgb(255, 0, 0), rgb(255, 0, 255) 15%, rgb(0, 0, 255) 33%, rgb(0, 255, 255) 49%, rgb(0, 255, 0) 67%, rgb(255, 255, 0) 84%, rgb(255, 0, 0));"></div><div class="swatch" title="Teal, Magenta, Yellow" style="background: -webkit-linear-gradient(right bottom, rgb(255, 185, 13), rgb(204, 0, 69) 50%, rgb(0, 153, 128));"></div><div class="swatch" title="Peach" style="background: -webkit-linear-gradient(right bottom, rgb(242, 171, 43), rgb(225, 123, 25));"></div><div class="swatch" title="Yellow, Orange" style="background: -webkit-linear-gradient(right bottom, rgb(255, 238, 88), rgb(252, 199, 54) 28%, rgb(241, 141, 70) 67%, rgb(233, 93, 59) 89%, rgb(228, 42, 50));"></div><div class="swatch" title="PS i love you" style="background: -webkit-linear-gradient(right bottom, rgb(22, 127, 232), rgb(0, 60, 123));"></div><div class="swatch" title="Vista" style="background: -webkit-linear-gradient(right bottom, rgb(116, 116, 116), rgb(109, 109, 109) 50%, rgb(126, 126, 126) 50%, rgb(133, 133, 133));"></div></div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="controls sidebar">
+	                    <button id="gradient_ok">OK</button>
+	                    <button id="gradient_cancel">Cancel</button>
+	                </div>
+	                <div class="clear"></div>
+	            </div>
+	            <div class="static_right">
+	                <div class="main">
+	                    <div class="static_left">
+	                        <span>Name:</span><input id="gradient_name" type="text">
+	                    </div>
+	                </div>
+	                <div class="controls sidebar">
+	                    <button id="gradient_new">New</button>
+	                </div>
+	                <div class="clear"></div>
+	            </div>
+	            <div class="holder">
+	                <h3>Gradient</h3>
+	                <div id="gradient_holder">
+	                    <div class="frame">
+	                        <div id="gradient" style="background: -webkit-linear-gradient(left, white, black);">
+	                        <div><div class="picker bottom" data-color="[255,255,255]" data-percentage="0" style="left: 0%;"><div class="arrow"></div><div class="box"><div class="color_field" style="background: white;"></div></div></div><span class="middlepoint bottom" data-percentage="50" style="left: 50%;"><span></span></span><div class="picker bottom" data-color="[0,0,0]" data-percentage="100" style="left: 100%;"><div class="arrow"></div><div class="box"><div class="color_field" style="background: black;"></div></div></div></div></div>
+	                    </div>
+	                </div>
+	                <div id="stops" class="holder">
+	                    <h3>Stops</h3>
+	                    <div id="color_stops">
+	                        <div class="disabled">
+	                            <span>Color:</span><div id="stop_color" class="color_field" style="background-color: transparent;"></div>
+	                        </div>
+	                        <div class="disabled">
+	                            <label for="stop_location">Location:</label>
+									<input type="text" id="stop_location" data-min="0" data-max="100" data-restrict="digits" disabled="">%
+	                        </div>
+	                        <button id="remove_stop" disabled="">Delete</button>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+		</div>
+		<div id="colorpicker" class="window">
+			<div class="head moveable">
+				<h2>Colorpicker</h2>
+			</div>
+			<div class="body">
+            	<div class="main">
+	                <div id="color_field" class="border_box">
+	                    <canvas id="field" width="256" height="256"></canvas>
+	                    <canvas id="circle" class="colorcircle" width="256" height="256"></canvas>
+	                </div> 
+	                <div id="color_slider">
+	                    <canvas class="border_box" width="19" height="256"></canvas>
+	                    <div style="top: 256px;">
+	                        <div class="arrow left"><div class="spike"></div><div class="rear"></div></div>
+	                        <div class="arrow right"><div class="spike"></div><div class="rear"></div></div>
+	                    </div>
+	                </div>
+	                <div class="color_preview lightbox">
+	                    <label>new</label>
+	                    <div id="new_color" style="background: rgb(0, 0, 0);"></div>
+	                    <label>current</label>
+	                    <div id="current_color"></div>
+	                </div>
+	                <div class="color_inputs">
+	                    <ul>
+	                        <li>
+								<input type="radio" id="hsb_h-radio" name="color" value="hsb_h">
+								<label for="hsb_h-radio">H:</label>
+								<input id="hsb_h" type="text" data-min="0" data-max="360" data-restrict="digits" value="0">
+								°
+							</li>
+	                        <li>
+								<input type="radio" id="hsb_s-radio" name="color" value="hsb_s">
+								<label for="hsb_s-radio">S:</label>
+								<input id="hsb_s" type="text" data-min="0" data-max="100" data-restrict="digits" value="0">
+								%
+							</li>
+	                        <li>
+								<input type="radio" id="hsb_b-radio" name="color" value="hsb_b" checked="checked">
+								<label for="hsb_b-radio">B:</label>
+								<input id="hsb_b" type="text" data-min="0" data-max="100" data-restrict="digits" value="0">
+								%
+							</li>
+	                    </ul>
+	                    <ul>
+	                        <li>
+								<input type="radio" id="rgb_r-radio" name="color" value="rgb_r">
+								<label for="rgb_r-radio">R:</label>
+								<input id="rgb_r" type="text" data-min="0" data-max="255" data-restrict="digits" value="0">
+							</li>
+	                        <li>
+								<input type="radio" id="rgb_g-radio" name="color" value="rgb_g">
+								<label for="rgb_g-radio">G:</label>
+								<input id="rgb_g" type="text" data-min="0" data-max="255" data-restrict="digits" value="0">
+							</li>
+	                        <li>
+								<input type="radio" id="rgb_b-radio" name="color" value="rgb_b">
+								<label for="rgb_b-radio">B:</label>
+								<input id="rgb_b" type="text" data-min="0" data-max="255" data-restrict="digits" value="0">
+							</li>
+	                    </ul>
+	                    <div id="hex_holder">
+							<label for="hex">#</label>
+							<input type="text" id="hex" size="10" maxlength="6" data-restrict="hexcode">
+						</div>
+	                </div>
+	            </div>
+	            <div class="controls">
+	                <button id="color_ok">OK</button>
+	                <button id="color_cancel">Cancel</button>
+	                <button id="color_add">Add to Swatches</button>
+	                <div id="swatches_holder">
+	                    <div id="swatches" class="paint_bucket">
+	                    <div><span class="swatch" title="White" data-hex="ffffff" style="background: rgb(255, 255, 255);"></span><span class="swatch" title="10% Gray" data-hex="e5e5e5" style="background: rgb(229, 229, 229);"></span><span class="swatch" title="20% Gray" data-hex="cccccc" style="background: rgb(204, 204, 204);"></span><span class="swatch" title="30% Gray" data-hex="b3b3b3" style="background: rgb(179, 179, 179);"></span><span class="swatch" title="40% Gray" data-hex="999999" style="background: rgb(153, 153, 153);"></span><span class="swatch" title="50% Gray" data-hex="808080" style="background: rgb(128, 128, 128);"></span><span class="swatch" title="60% Gray" data-hex="666666" style="background: rgb(102, 102, 102);"></span><span class="swatch" title="70% Gray" data-hex="4d4d4d" style="background: rgb(77, 77, 77);"></span><span class="swatch" title="80% Gray" data-hex="333333" style="background: rgb(51, 51, 51);"></span><span class="swatch" title="90% Gray" data-hex="1a1a1a" style="background: rgb(26, 26, 26);"></span><span class="swatch" title="Black" data-hex="000000" style="background: rgb(0, 0, 0);"></span></div></div>
+	                </div>
+	            </div>
+	        </div>
+		</div><!-- /ColorPicker -->
+        <div id="gradient_editor" class="window">
+            <div class="head moveable">
+                <h2>Gradient Editor</h2>
+            </div>
+            <div class="body">
+               <div class="static_right">
+                    <div class="main">
+                        <div class="holder">
+                            <h3>Presets</h3>
+                            <div id="gradient_presets_holder" class="border_box">
+                                <div id="gradient_presets">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls sidebar">
+                        <button id="gradient_ok">OK</button>
+                        <button id="gradient_cancel">Cancel</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="static_right">
+                    <div class="main">
+                        <div class="static_left">
+                            <span>Name:</span><input id="gradient_name" type="text">
+                        </div>
+                    </div>
+                    <div class="controls sidebar">
+                        <button id="gradient_new">New</button>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="holder">
+                    <h3>Gradient</h3>
+                    <div id="gradient_holder">
+                        <div class="frame">
+                            <div id="gradient">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="stops" class="holder">
+                        <h3>Stops</h3>
+                        <div id="color_stops">
+                            <div class="disabled">
+                                <span>Color:</span><div id="stop_color" class="color_field"></div>
+                            </div>
+                            <div class="disabled">
+                                <span>Location:</span>
+                                    <input type="text" id="stop_location" data-min="0" data-max="100" data-restrict="digits" disabled="disabled">%
+                            </div>
+                            <button id="remove_stop" disabled="disabled">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="colorpicker" class="window">
+            <div class="head moveable">
+                <h2>Colorpicker</h2>
+            </div>
+            <div class="body">
+                <div class="main">
+                    <div id="color_field" class="border_box">
+                        <canvas id="field" width="256" height="256"></canvas>
+                        <canvas id="circle" class="colorcircle" width="256" height="256"></canvas>
+                    </div> 
+                    <div id="color_slider">
+                        <canvas class="border_box" width="19" height="256"></canvas>
+                        <div>
+                            <div class="arrow left"><div class="spike"></div><div class="rear"></div></div>
+                            <div class="arrow right"><div class="spike"></div><div class="rear"></div></div>
+                        </div>
+                    </div>
+                    <div class="color_preview lightbox">
+                        <label>new</label>
+                        <div id="new_color"></div>
+                        <label>current</label>
+                        <div id="current_color"></div>
+                    </div>
+                    <div class="color_inputs">
+                        <ul>
+                            <li>
+                                <input type="radio" name="color" value="hsb_h">
+                                <span>H:</span>
+                                <input id="hsb_h" type="text" data-min="0" data-max="360" data-restrict="digits" value="0">
+                                °
+                            </li>
+                            <li>
+                                <input type="radio" name="color" value="hsb_s">
+                                <span>S:</span>
+                                <input id="hsb_s" type="text" data-min="0" data-max="100" data-restrict="digits" value="0">
+                                %
+                            </li>
+                            <li>
+                                <input type="radio" name="color" value="hsb_b" checked="checked">
+                                <span>B:</span>
+                                <input id="hsb_b" type="text" data-min="0" data-max="100" data-restrict="digits" value="0">
+                                %
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <input type="radio" name="color" value="rgb_r">
+                                <span>R:</span>
+                                <input id="rgb_r" type="text" data-min="0" data-max="255" data-restrict="digits" value="0">
+                            </li>
+                            <li>
+                                <input type="radio" name="color" value="rgb_g">
+                                <span>G:</span>
+                                <input id="rgb_g" type="text" data-min="0" data-max="255" data-restrict="digits" value="0">
+                            </li>
+                            <li>
+                                <input type="radio" name="color" value="rgb_b">
+                                <span>B:</span>
+                                <input id="rgb_b" type="text" data-min="0" data-max="255" data-restrict="digits" value="0">
+                            </li>
+                        </ul>
+                        <div id="hex_holder">
+                            #
+                            <input type="text" id="hex" size="10" maxlength="6" data-restrict="hexcode">
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="color_ok">OK</button>
+                    <button id="color_cancel">Cancel</button>
+                    <button id="color_add">Add to Swatches</button>
+                    <div id="swatches_holder">
+                        <div id="swatches" class="paint_bucket">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /ColorPicker -->
+	</div> <!-- /LayerStyle -->
+</body></html>
