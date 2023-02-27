@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Journal Entry</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+			rel="stylesheet">
+		<link href='style.css'
+			rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<article>
+			<header>
+				<h1>Introduction to PHP</h1>
+			</header>
+
+			<section>
+				<p>PHP is a server-side scripting language that is widely used for web
+					development. It was created by Rasmus Lerdorf in 1994 and has since then
+					been continuously updated by a large community of developers. PHP is an
+					acronym for Hypertext Preprocessor, and it is open-source, which means that
+					it is free to use and can be modified by anyone. PHP is an easy-to-learn
+					language and is commonly used in combination with HTML and CSS to create
+					dynamic websites.</p>
+
+				<h2>PHP Syntax</h2>
+
+				<p>PHP code is embedded into HTML code and is enclosed within <code>&lt;?php
+						?&gt;</code> tags. For example, to print the message “Hello, World!” using
+					PHP, the following code can be used:</p>
+
+				<pre class="wp-block-code" aria-describedby="shcb-language-1"
+					data-shcb-language-name="HTML, XML" data-shcb-language-slug="xml"><div><code class="hljs language-xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>PHP Hello World<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-string">"Hello, World!"</span>; <span class="hljs-meta">?&gt;</span></span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></div></pre>
+				<p>The echo statement is used to output text in PHP. In the above example,
+					the echo statement outputs the string “Hello, World!” to the web page.</p>
+				<h2>PHP Variables</h2>
+
+				<p>Variables are used to store data in PHP. A variable is created by
+					assigning a value to a variable name. The variable name must start with a
+					dollar sign ($) followed by the variable name. For example, to create a
+					variable called “name” that stores the string “John Doe”, the following
+					code
+					can be used:</p>
+
+				<pre class="wp-block-code" aria-describedby="shcb-language-2"
+					data-shcb-language-name="PHP" data-shcb-language-slug="php"><div><code class="hljs language-php"><span class="hljs-meta">&lt;?php</span>
+$name = <span class="hljs-string">"John Doe"</span>;
+<span class="hljs-keyword">echo</span> $name;
+<span class="hljs-meta">?&gt;</span></code></div></pre>
+
+				<p>The above code will output “John Doe” to the web page.</p>
+
+				<h2>PHP Operators</h2>
+
+				<p>PHP supports a variety of operators such as arithmetic operators,
+					comparison operators, and logical operators. Arithmetic operators are used
+					to perform mathematical operations such as addition, subtraction,
+					multiplication, and division. Comparison operators are used to compare two
+					values and return a boolean value. Logical operators are used to combine
+					multiple conditions and return a boolean value.</p>
+
+				<p>Here is an example of using arithmetic operators in PHP:</p>
+
+<pre class="wp-block-code" aria-describedby="shcb-language-2" data-shcb-language-name="PHP" data-shcb-language-slug="php"><div><code class="hljs language-php"><span class="hljs-meta">&lt;?php</span>
+$x = <span class="hljs-number">10</span>;
+$y = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">echo</span> $x + $y; <span class="hljs-comment">// Outputs 15</span>
+<span class="hljs-keyword">echo</span> $x - $y; <span class="hljs-comment">// Outputs 5</span>
+<span class="hljs-keyword">echo</span> $x * $y; <span class="hljs-comment">// Outputs 50</span>
+<span class="hljs-keyword">echo</span> $x / $y; <span class="hljs-comment">// Outputs 2</span>
+<span class="hljs-meta">?&gt;</span></code></div></pre>
+
+				<h2>PHP Conditional Statements</h2>
+
+				<p>Conditional statements are used to execute different actions based on
+					different conditions. PHP supports if, if-else, and switch statements. Here
+					is an example of using an if statement in PHP:</p>
+
+				<pre class="wp-block-code" aria-describedby="shcb-language-2"
+					data-shcb-language-name="PHP" data-shcb-language-slug="php"><div><code class="hljs language-php"><span class="hljs-meta">&lt;?php</span>
+$x = <span class="hljs-number">10</span>;
+$y = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">if</span> ($x &gt; $y) {
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">"x is greater than y"</span>;
+}
+<span class="hljs-meta">?&gt;</span></code></div></pre>
+
+				<p>The above code will output “x is greater than y” to the web page since 10
+					is greater than 5.</p>
+
+				<h2>Conclusion</h2>
+
+				<p>PHP is a versatile and widely-used language for web development. It
+					provides a powerful set of features that can be used to create dynamic
+					websites. In this blog post, we covered the basics of PHP syntax,
+					variables,
+					operators, and conditional statements. With these fundamental concepts, you
+					can start creating your own PHP programs and applications.</p>
+			</section>
+		</article>
+	</body>
+</html>

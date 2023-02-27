@@ -1,0 +1,98 @@
+/* Minimal CSS Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* The Styles */
+
+body,
+code {
+    font-family: 'Indie Flower', cursive;
+}
+
+article {
+    background-color: #ffffcc;
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+article:before {
+    position: absolute;
+    left: 82px;
+    top: 0;
+    bottom: 0;
+    content: "";
+    width: 2px;
+    display: block;
+    height: 100%;
+    background: #ffcccc;
+}
+
+article:after {
+    position: absolute;
+    left: 90px;
+    top: 0;
+    bottom: 0;
+    content: "";
+    width: 2px;
+    display: block;
+    height: 100%;
+    background: #ffcccc;
+}
+
+header {
+    padding-left: 104px;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 16px 0;
+}
+
+section {
+    background-image: repeating-linear-gradient(#cce0ff, #cce0ff 2px, transparent 2px, transparent 2rem);
+    background-attachment: local;
+    background-size: 32px 32px;
+
+    padding-left: 104px;
+    font-size: 18px;
+    line-height: 1.8;
+    padding-top: 6px;
+}
+
+section p {
+    max-width: 528px;
+    margin-bottom: 16px;
+}
+
+h2 {
+        font-size: 36px;
+    margin-bottom: 13px;
+}
+
+code {
+    background-color: yellow;
+}
